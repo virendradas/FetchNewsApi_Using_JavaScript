@@ -39,3 +39,9 @@ const getNews = async (news) => {
 getNews('bollywood');
 
 searchData.addEventListener('click', ()=>getNews(search.value));
+
+search.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        getNews(search.value);
+    }
+});
